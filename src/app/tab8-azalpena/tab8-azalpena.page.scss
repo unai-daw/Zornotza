@@ -1,0 +1,27 @@
+$fondo:linear-gradient(#2C698D, #BAE8E8);
+
+.fondo{
+    background-color: $fondo;
+}
+
+#jarraitu{
+    padding: 1.7vh;
+    border-radius: 8px;
+    background-color: #144674;
+    font-size: 15px;
+    font-style: bold;
+    color: white;
+    margin-left: 1700px;
+    
+}
+
+.class{
+
+    justify-content: left;
+    align-items: left;
+}
+
+.head{
+    background-color: #3D8ED9;
+    padding: 2vh;
+}
