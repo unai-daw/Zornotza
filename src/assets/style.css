@@ -25,3 +25,34 @@
     display: flex;
     justify-content: center;
   }
+
+  .buho-animation{
+    animation-name: buho-animation;
+    animation-duration: 20s;
+  }
+
+  @keyframes buho-animation {
+    0%   {margin-left:-20%;rotate: 0deg;}
+    25%  {margin-left:40%;rotate: 360deg;}
+    75%  {margin-left:40%;rotate: 360deg;}
+    100% {margin-left:-20%;rotate: 0deg;}
+  }
+
+  .black_bg_animation{
+    animation-name: black-bg-animation;
+    animation-duration: 22s;
+  }
+  @keyframes black-bg-animation {
+    0%   {opacity: 60%;margin-left: 0;}
+    75%  {opacity: 60%;margin-left: 0;}
+    100% {opacity: 0%;margin-left: 0;}
+  }
+
+  #buho,#black_bg{
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}

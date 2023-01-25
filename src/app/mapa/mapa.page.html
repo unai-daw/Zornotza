@@ -11,13 +11,7 @@
 />
 
 <ion-content [fullscreen]="true">
-  <div id="leafletMap" style="height: 100%;"></div>
-
-  <div class="square">
-    <img style="height: 100px" src="../../assets/Img/hontza.png" />
-  </div>
-
-  <button id="play">Play</button>
-  <button id="pause">Pause</button>
-  <button id="stop">Stop</button>
+  <div id="leafletMap" style="height: 100%;z-index: 0;"> </div>
+  <img id="buho" style="position: absolute;bottom: 0; z-index:2; width: 20%;margin-bottom: 5%;margin-left:-20%" src="../../assets/Img/hontza.jpg" />
+  <img id="black_bg" style="position: absolute;bottom: 0; z-index:1; width: 100%;opacity:0%;margin-left: 100%;" src="../../assets/Img/negro.jpg" />
 </ion-content>
