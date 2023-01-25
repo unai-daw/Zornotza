@@ -11,8 +11,7 @@ $fondo:linear-gradient(#2C698D, #BAE8E8);
     font-size: 15px;
     font-style: bold;
     color: white;
-    margin-left: 1700px;
-    
+ 
 }
 
 .class{
@@ -24,4 +23,9 @@ $fondo:linear-gradient(#2C698D, #BAE8E8);
 .head{
     background-color: #3D8ED9;
     padding: 2vh;
+}
+
+.foot{
+    display: flex;
+    justify-content: center;
 }
