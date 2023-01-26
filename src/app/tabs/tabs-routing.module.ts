@@ -44,40 +44,32 @@ const routes: Routes = [
         loadChildren: () => import('../haizetara-azalpena/haizetara-azalpena.module').then(m => m.HaizetaraAzalpenaPageModule)
       },
       {
-        path: 'tab2-jokua',
-        loadChildren: () => import('../tab2-jokua/tab2-jokua.module').then(m => m.Tab2JokuaPageModule)
+        path: 'andres-espinosa-jokua',
+        loadChildren: () => import('../andres-espinosa-jokua/andres-espinosa-jokua.module').then( m => m.AndresEspinosaJokuaPageModule)
       },
       {
-        path: 'tab3-jokua',
-        loadChildren: () => import('../tab3-jokua/tab3-jokua.module').then(m => m.Tab3JokuaPageModule)
+        path: 'nagelen-eskultura-jokua',
+        loadChildren: () => import('../nagelen-eskultura-jokua/nagelen-eskultura-jokua.module').then( m => m.NagelenEskulturaJokuaPageModule)
       },
       {
-        path: 'tab4-jokua',
-        loadChildren: () => import('../tab4-jokua/tab4-jokua.module').then(m => m.Tab4JokuaPageModule)
+        path: 'mikel-urdangarin-jokua',
+        loadChildren: () => import('../mikel-urdangarin-jokua/mikel-urdangarin-jokua.module').then( m => m.MikelUrdangarinJokuaPageModule)
       },
       {
-        path: 'tab5-jokua',
-        loadChildren: () => import('../tab5-jokua/tab5-jokua.module').then(m => m.Tab5JokuaPageModule)
+        path: 'lara-izaguire-jokua',
+        loadChildren: () => import('../lara-izaguire-jokua/lara-izaguire-jokua.module').then( m => m.LaraIzaguireJokuaPageModule)
       },
       {
-        path: 'tab4-jokua2',
-        loadChildren: () => import('../tab4-jokua2/tab4-jokua2.module').then(m => m.Tab4Jokua2PageModule)
+        path: 'udabarri-dantza-taldea-jokua',
+        loadChildren: () => import('../udabarri-dantza-taldea-jokua/udabarri-dantza-taldea-jokua.module').then( m => m.UdabarriDantzaTaldeaJokuaPageModule)
       },
       {
-        path: 'tab5-jokua2',
-        loadChildren: () => import('../tab5-jokua2/tab5-jokua2.module').then(m => m.Tab5Jokua2PageModule)
+        path: 'emakumeen-espetxea-jokua',
+        loadChildren: () => import('../emakumeen-espetxea-jokua/emakumeen-espetxea-jokua.module').then( m => m.EmakumeenEspetxeaJokuaPageModule)
       },
       {
-        path: 'tab6-jokua',
-        loadChildren: () => import('../tab6-jokua/tab6-jokua.module').then(m => m.Tab6JokuaPageModule)
-      },
-      {
-        path: 'tab7-jokua',
-        loadChildren: () => import('../tab7-jokua/tab7-jokua.module').then(m => m.Tab7JokuaPageModule)
-      },
-      {
-        path: 'tab8-jokua',
-        loadChildren: () => import('../tab8-jokua/tab8-jokua.module').then(m => m.Tab8JokuaPageModule)
+        path: 'haizetara-jokua',
+        loadChildren: () => import('../haizetara-jokua/haizetara-jokua.module').then( m => m.HaizetaraJokuaPageModule)
       },
 
       
