@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Animation, AnimationController, ViewWillLeave } from '@ionic/angular';  
+import { Platform } from '@ionic/angular';  
 import * as L from 'leaflet';
 
 @Component({
@@ -7,13 +7,17 @@ import * as L from 'leaflet';
   templateUrl: 'mapa.page.html',
   styleUrls: ['../../assets/style.css'],
 })
-export class MapaPage implements OnInit,ViewWillLeave {
+export class MapaPage implements OnInit {
+
 
   leafletMap: any;
   lat: number = 43.21829;
   lng: number = - 2.73442;
   zoom: number = 16;
-  static anim = 0;
+  musica:any;
+
+  constructor(platform: Platform) {
+  }
 
   loadLeafletMap() {
     this.leafletMap = new L.Map('leafletMap');
@@ -82,17 +86,7 @@ export class MapaPage implements OnInit,ViewWillLeave {
 
   ngOnInit(): void {
     this.loadLeafletMap();
-    let musica = new Audio("../../assets/audio/Mapa-cancion.mp3");
-    musica.volume = 0.4;
-    musica.play();
-    if(MapaPage.anim == 0){
-      document.getElementById("buho").classList.add("buho-animation");
-      document.getElementById("black_bg").classList.add("black_bg_animation");
-    }
+    //document.getElementById("buho").classList.add("buho-animation");
+    //document.getElementById("black_bg").classList.add("black_bg_animation");
   }
-
-  ionViewWillLeave(): void {
-    MapaPage.anim =1;
-  }
-
 }
