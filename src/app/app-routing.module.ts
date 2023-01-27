@@ -7,10 +7,6 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
-    path: 'tab4-jokua2',
-    loadChildren: () => import('./tab4-jokua2/tab4-jokua2.module').then( m => m.Tab4Jokua2PageModule)
-  },
-  {
     path: 'tab5-jokua2',
     loadChildren: () => import('./tab5-jokua2/tab5-jokua2.module').then( m => m.Tab5Jokua2PageModule)
   },
