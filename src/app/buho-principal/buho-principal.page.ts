@@ -1,5 +1,5 @@
 import { Component} from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import {ViewDidEnter, ViewWillEnter, ViewWillLeave } from '@ionic/angular';
 import { interval } from 'rxjs';
 
@@ -10,7 +10,7 @@ import { interval } from 'rxjs';
 })
 export class BuhoPrincipalPage implements ViewWillEnter,ViewWillLeave,ViewDidEnter {
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute,private  router: Router) {}
 
   static text:any;
   title:any;
@@ -28,7 +28,7 @@ export class BuhoPrincipalPage implements ViewWillEnter,ViewWillLeave,ViewDidEnt
   }
 
   ionViewDidEnter(): void {
-    BuhoPrincipalPage.interval = setInterval(this.checkAudio,10);
+    BuhoPrincipalPage.interval = setInterval(this.checkAudio,10,this.router);
   }
 
   ionViewWillLeave(): void {
@@ -37,9 +37,9 @@ export class BuhoPrincipalPage implements ViewWillEnter,ViewWillLeave,ViewDidEnt
     clearInterval(BuhoPrincipalPage.interval);
   }
 
-  checkAudio(){
+  checkAudio(router:any){
     if(BuhoPrincipalPage.audio.paused){
-      window.location.href = '../tabs/'+ BuhoPrincipalPage.text + '-azalpena';
+      router.navigateByUrl( 'tabs/'+ BuhoPrincipalPage.text + '-azalpena');
     }
   }
 
