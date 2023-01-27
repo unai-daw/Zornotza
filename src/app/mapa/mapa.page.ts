@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Platform } from '@ionic/angular';  
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Platform, ViewDidEnter, ViewWillEnter, ViewWillLeave } from '@ionic/angular';  
 import * as L from 'leaflet';
 
 @Component({
@@ -7,7 +8,7 @@ import * as L from 'leaflet';
   templateUrl: 'mapa.page.html',
   styleUrls: ['../../assets/style.css'],
 })
-export class MapaPage implements OnInit {
+export class MapaPage implements OnInit,ViewWillLeave {
 
 
   leafletMap: any;
@@ -16,12 +17,17 @@ export class MapaPage implements OnInit {
   zoom: number = 16;
   musica:any;
 
-  constructor(platform: Platform) {
+  constructor(private router: Router) {
+  }
+
+
+  ionViewWillLeave(): void {
+    document.getElementById("buho").classList.remove("buho-animation");
+    document.getElementById("black_bg").classList.remove("black_bg_animation");
   }
 
   loadLeafletMap() {
     this.leafletMap = new L.Map('leafletMap');
-
     const self = this;
 
     this.leafletMap.on('load', function () {
@@ -65,28 +71,63 @@ export class MapaPage implements OnInit {
       this.leafletMap      
     );
 
+    var content1 = L.DomUtil.create('div','content1'),popup1 = L.popup().setContent(content1);
+    content1.innerHTML = "<button>Andres Espinosa</button>";
+    L.DomEvent.addListener(content1, 'click', () => {
+      this.navigateTo('andres-espinosa');
+    });
 
-    let popup = L.popup().setContent('<a href="../tabs/buho-principal/andres-espinosa">Andres Espinosa</a>');
-    let popup2 = L.popup().setContent('<a href="../tabs/buho-principal/nagelen-eskultura">Nagelen eskultura</a>');
-    let popup3 = L.popup().setContent('<a href="../tabs/buho-principal/mikel-urdangarin">Mikel Urdangarin</a>');
-    let popup4 = L.popup().setContent('<a href="../tabs/buho-principal/lara-izaguirre">Lara Izaguirre</a>');
-    let popup5 = L.popup().setContent('<a href="../tabs/buho-principal/udabarri-dantza-taldea">Udabarri dantza taldea</a>');
-    let popup6 = L.popup().setContent('<a href="../tabs/buho-principal/emakumeen-espetxea">Emakumeen Espetxea</a>');
-    let popup7 = L.popup().setContent('<a href="../tabs/buho-principal/haizetara">Haizetara</a>');
+    var content2 = L.DomUtil.create('div','content2'),popup2 = L.popup().setContent(content2);
+    content2.innerHTML = "<button>Nagelen eskultura</button>";
+    L.DomEvent.addListener(content2, 'click', () => {
+      this.navigateTo('nagelen-eskultura');
+    });
 
-    marker.bindPopup(popup);
+    var content3 = L.DomUtil.create('div','content3'),popup3 = L.popup().setContent(content2);
+    content3.innerHTML = "<button>Mikel Urdangarin</button>";
+    L.DomEvent.addListener(content3, 'click', () => {
+      this.navigateTo('mikel-urdangarin');
+    });
+
+    var content4 = L.DomUtil.create('div','content4'),popup4 = L.popup().setContent(content4);
+    content4.innerHTML = "<button>Lara Izaguirre</button>";
+    L.DomEvent.addListener(content4, 'click', () => {
+      this.navigateTo('lara-izaguirre');
+    });
+
+    var content5 = L.DomUtil.create('div','content5'),popup5 = L.popup().setContent(content5);
+    content5.innerHTML = "<button>Udabarri dantza taldea</button>";
+    L.DomEvent.addListener(content5, 'click', () => {
+      this.navigateTo('udabarri-dantza-taldea');
+    });
+
+    var content6 = L.DomUtil.create('div','content6'),popup6 = L.popup().setContent(content6);
+    content6.innerHTML = "<button>Emakumeen Espetxea</button>";
+    L.DomEvent.addListener(content6, 'click', () => {
+      this.navigateTo('emakumeen-espetxea');
+    });
+
+    var content7 = L.DomUtil.create('div','content7'),popup7 = L.popup().setContent(content7);
+    content7.innerHTML = "<button>Haizetara</button>";
+    L.DomEvent.addListener(content7, 'click', () => {
+      this.navigateTo('haizetara');
+    });
+  
+    marker.bindPopup(popup1);
     marker2.bindPopup(popup2);
     marker3.bindPopup(popup3);
     marker4.bindPopup(popup4);
     marker5.bindPopup(popup5);
     marker6.bindPopup(popup6);
     marker7.bindPopup(popup7);
-
   }
 
   ngOnInit(): void {
     this.loadLeafletMap();
-    //document.getElementById("buho").classList.add("buho-animation");
-    //document.getElementById("black_bg").classList.add("black_bg_animation");
+
+  }
+
+  navigateTo(link:string){
+    this.router.navigateByUrl("/tabs/buho-principal/" + link);
   }
 }

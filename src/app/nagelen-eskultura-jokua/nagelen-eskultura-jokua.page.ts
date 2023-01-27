@@ -1,15 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component } from '@angular/core';
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-nagelen-eskultura-jokua',
   templateUrl: './nagelen-eskultura-jokua.page.html',
   styleUrls: ['../../assets/style.css'],
 })
-export class NagelenEskulturaJokuaPage implements OnInit {
+export class NagelenEskulturaJokuaPage{
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  constructor(private router: Router) { }
 }
