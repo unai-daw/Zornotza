@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Platform, ViewDidEnter, ViewWillEnter, ViewWillLeave } from '@ionic/angular';  
 import * as L from 'leaflet';
+import { Functions } from 'src/classes/functions';
 
 @Component({
   selector: 'app-mapa',
@@ -15,12 +16,8 @@ export class MapaPage implements OnInit,ViewWillLeave {
   lat: number = 43.21829;
   lng: number = - 2.73442;
   zoom: number = 16;
-  musica:any;
 
-  constructor(private router: Router) {
-  }
-
-
+  constructor(private router: Router) {}
   ionViewWillLeave(): void {
     document.getElementById("buho").classList.remove("buho-animation");
     document.getElementById("black_bg").classList.remove("black_bg_animation");
@@ -74,43 +71,43 @@ export class MapaPage implements OnInit,ViewWillLeave {
     var content1 = L.DomUtil.create('div','content1'),popup1 = L.popup().setContent(content1);
     content1.innerHTML = "<button>Andres Espinosa</button>";
     L.DomEvent.addListener(content1, 'click', () => {
-      this.navigateTo('andres-espinosa');
+      Functions.navigateTo(this.router,'buho-principal/andres-espinosa');
     });
 
     var content2 = L.DomUtil.create('div','content2'),popup2 = L.popup().setContent(content2);
     content2.innerHTML = "<button>Nagelen eskultura</button>";
     L.DomEvent.addListener(content2, 'click', () => {
-      this.navigateTo('nagelen-eskultura');
+      Functions.navigateTo(this.router,'buho-principal/nagelen-eskultura');
     });
 
-    var content3 = L.DomUtil.create('div','content3'),popup3 = L.popup().setContent(content2);
+    var content3 = L.DomUtil.create('div','content3'),popup3 = L.popup().setContent(content3);
     content3.innerHTML = "<button>Mikel Urdangarin</button>";
     L.DomEvent.addListener(content3, 'click', () => {
-      this.navigateTo('mikel-urdangarin');
+      Functions.navigateTo(this.router,'buho-principal/mikel-urdangarin');
     });
 
     var content4 = L.DomUtil.create('div','content4'),popup4 = L.popup().setContent(content4);
     content4.innerHTML = "<button>Lara Izaguirre</button>";
     L.DomEvent.addListener(content4, 'click', () => {
-      this.navigateTo('lara-izaguirre');
+      Functions.navigateTo(this.router,'buho-principal/lara-izaguirre');
     });
 
     var content5 = L.DomUtil.create('div','content5'),popup5 = L.popup().setContent(content5);
     content5.innerHTML = "<button>Udabarri dantza taldea</button>";
     L.DomEvent.addListener(content5, 'click', () => {
-      this.navigateTo('udabarri-dantza-taldea');
+      Functions.navigateTo(this.router,'buho-principal/udabarri-dantza-taldea');
     });
 
     var content6 = L.DomUtil.create('div','content6'),popup6 = L.popup().setContent(content6);
     content6.innerHTML = "<button>Emakumeen Espetxea</button>";
     L.DomEvent.addListener(content6, 'click', () => {
-      this.navigateTo('emakumeen-espetxea');
+      Functions.navigateTo(this.router,'buho-principal/emakumeen-espetxea');
     });
 
     var content7 = L.DomUtil.create('div','content7'),popup7 = L.popup().setContent(content7);
     content7.innerHTML = "<button>Haizetara</button>";
     L.DomEvent.addListener(content7, 'click', () => {
-      this.navigateTo('haizetara');
+      Functions.navigateTo(this.router,'buho-principal/haizetara');
     });
   
     marker.bindPopup(popup1);
@@ -124,10 +121,5 @@ export class MapaPage implements OnInit,ViewWillLeave {
 
   ngOnInit(): void {
     this.loadLeafletMap();
-
-  }
-
-  navigateTo(link:string){
-    this.router.navigateByUrl("/tabs/buho-principal/" + link);
   }
 }

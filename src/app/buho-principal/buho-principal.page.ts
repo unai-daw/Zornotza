@@ -2,6 +2,7 @@ import { Component} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import {ViewDidEnter, ViewWillEnter, ViewWillLeave } from '@ionic/angular';
 import { interval } from 'rxjs';
+import { Functions } from 'src/classes/functions';
 
 @Component({
   selector: 'app-buho-principal',
@@ -39,8 +40,7 @@ export class BuhoPrincipalPage implements ViewWillEnter,ViewWillLeave,ViewDidEnt
 
   checkAudio(router:any){
     if(BuhoPrincipalPage.audio.paused){
-      router.navigateByUrl( 'tabs/'+ BuhoPrincipalPage.text + '-azalpena');
+      Functions.navigateTo(router, BuhoPrincipalPage.text + '-azalpena');
     }
   }
-
 }

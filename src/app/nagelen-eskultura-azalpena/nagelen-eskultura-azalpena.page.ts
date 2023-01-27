@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ViewWillLeave } from '@ionic/angular';
+import { Functions } from 'src/classes/functions';
 
 @Component({
   selector: 'app-nagelen-eskultura-azalpena',
@@ -8,7 +10,7 @@ import { ViewWillLeave } from '@ionic/angular';
 })
 export class NagelenEskulturaAzalpenaPage implements OnInit, ViewWillLeave {
 
-  constructor() { }
+  constructor(private router:Router) { }
   ngOnInit() {
     console.log(document.getElementById("videoplayer"));
   }
@@ -17,4 +19,7 @@ export class NagelenEskulturaAzalpenaPage implements OnInit, ViewWillLeave {
  
   }
 
+  navigateTo(){
+    Functions.navigateTo(this.router,"udabarri-dantza-taldea-jokua")
+  }
 }
