@@ -71,9 +71,6 @@ const routes: Routes = [
         path: 'haizetara-jokua',
         loadChildren: () => import('../haizetara-jokua/haizetara-jokua.module').then( m => m.HaizetaraJokuaPageModule)
       },
-
-      
-
       {
         path: '',
         redirectTo: '/tabs/mapa',
