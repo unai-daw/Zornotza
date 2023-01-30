@@ -16,6 +16,6 @@ export class LaraIzaguirreAzalpenaPage implements OnInit {
 
 
   navigateTo(){
-    Functions.navigateTo(this.router,"lara-izaguire-jokua")
+    Functions.navigateTo(this.router,"lara-izaguirre-jokua")
     }
 }

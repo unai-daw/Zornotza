@@ -15,6 +15,6 @@ export class AndresEspinosaAzalpenaPage implements OnInit {
   }
 
   navigateTo(){
-    Functions.navigateTo(this.router,"emakumeen-espetxea-jokua")
+    Functions.navigateTo(this.router,"andres-espinosa-jokua")
     }
 }
