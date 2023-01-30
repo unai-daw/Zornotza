@@ -7,10 +7,6 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
-    path: 'tab5-jokua2',
-    loadChildren: () => import('./tab5-jokua2/tab5-jokua2.module').then( m => m.Tab5Jokua2PageModule)
-  },
-  {
     path: 'mapa',
     loadChildren: () => import('./mapa/mapa.module').then( m => m.MapaPageModule)
   },
@@ -74,6 +70,11 @@ const routes: Routes = [
     path: 'haizetara-jokua',
     loadChildren: () => import('./haizetara-jokua/haizetara-jokua.module').then( m => m.HaizetaraJokuaPageModule)
   },
+  {
+    path: 'lara-izaguirre-jokua2',
+    loadChildren: () => import('./lara-izaguirre-jokua2/lara-izaguirre-jokua2.module').then( m => m.LaraIzaguirreJokua2PageModule)
+  },
+
 
 
 ];

@@ -56,8 +56,12 @@ const routes: Routes = [
         loadChildren: () => import('../mikel-urdangarin-jokua/mikel-urdangarin-jokua.module').then( m => m.MikelUrdangarinJokuaPageModule)
       },
       {
-        path: 'lara-izaguire-jokua',
+        path: 'lara-izaguirre-jokua',
         loadChildren: () => import('../lara-izaguire-jokua/lara-izaguire-jokua.module').then( m => m.LaraIzaguireJokuaPageModule)
+      },
+      {
+        path: 'lara-izaguirre-jokua2',
+        loadChildren: () => import('../lara-izaguirre-jokua2/lara-izaguirre-jokua2.module').then( m =>m.LaraIzaguirreJokua2PageModule)
       },
       {
         path: 'udabarri-dantza-taldea-jokua',
