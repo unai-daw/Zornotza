@@ -15,7 +15,7 @@ export class MikelUrdangarinAzalpenaPage implements OnInit {
   }
 
   navigateTo(){
-    Functions.navigateTo(this.router,"udabarri-dantza-taldea-jokua")
+    Functions.navigateTo(this.router,"mikel-urdangarin-jokua")
     }
   
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Functions } from 'src/classes/functions';
 
 @Component({
   selector: 'app-lara-izaguirre-azalpena',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LaraIzaguirreAzalpenaPage implements OnInit {
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit() {
   }
 
+
+  navigateTo(){
+    Functions.navigateTo(this.router,"lara-izaguire-jokua")
+    }
 }

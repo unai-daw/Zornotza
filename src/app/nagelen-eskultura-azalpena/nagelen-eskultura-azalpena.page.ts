@@ -20,6 +20,6 @@ export class NagelenEskulturaAzalpenaPage implements OnInit, ViewWillLeave {
   }
 
   navigateTo(){
-    Functions.navigateTo(this.router,"udabarri-dantza-taldea-jokua")
+    Functions.navigateTo(this.router,"nagelen-eskultura-jokua")
   }
 }

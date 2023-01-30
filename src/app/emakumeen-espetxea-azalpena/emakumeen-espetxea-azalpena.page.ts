@@ -15,6 +15,6 @@ export class EmakumeenEspetxeaAzalpenaPage implements OnInit {
   }
   
   navigateTo(){
-    Functions.navigateTo(this.router,"udabarri-dantza-taldea-jokua")
+    Functions.navigateTo(this.router,"emakumeen-espetxea-jokua")
     }
 }
