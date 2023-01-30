@@ -28,7 +28,7 @@
 
   .buho-animation{
     animation-name: buho-animation;
-    animation-duration: 1s;
+    animation-duration: 20s;
   }
 
   @keyframes buho-animation {
@@ -40,7 +40,7 @@
 
   .black_bg_animation{
     animation-name: black-bg-animation;
-    animation-duration: 2s;
+    animation-duration: 22s;
   }
   @keyframes black-bg-animation {
     0%   {opacity: 60%;margin-left: 0;}

@@ -1,7 +1,6 @@
 import { Component} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import {ViewDidEnter, ViewWillEnter, ViewWillLeave } from '@ionic/angular';
-import { interval } from 'rxjs';
 import { Functions } from 'src/classes/functions';
 
 @Component({
@@ -21,7 +20,6 @@ export class BuhoPrincipalPage implements ViewWillEnter,ViewWillLeave,ViewDidEnt
 
   ionViewWillEnter(): void {
     BuhoPrincipalPage.text = String(this.route.snapshot.paramMap.get('text'));
-
     this.title = BuhoPrincipalPage.text.replaceAll("-", " ").toUpperCase();
 
     BuhoPrincipalPage.audio = new Audio("../../assets/audio/"+ BuhoPrincipalPage.text + ".m4a");

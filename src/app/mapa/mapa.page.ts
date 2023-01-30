@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Platform, ViewDidEnter, ViewWillEnter, ViewWillLeave } from '@ionic/angular';  
 import * as L from 'leaflet';
 import { Functions } from 'src/classes/functions';
+import { MapaPageModule } from './mapa.module';
 
 @Component({
   selector: 'app-mapa',
@@ -11,6 +12,8 @@ import { Functions } from 'src/classes/functions';
 })
 export class MapaPage implements OnInit,ViewWillLeave {
 
+  static song:any;
+  static audio:any;
 
   leafletMap: any;
   lat: number = 43.21829;
@@ -121,5 +124,22 @@ export class MapaPage implements OnInit,ViewWillLeave {
 
   ngOnInit(): void {
     this.loadLeafletMap();
+    MapaPage.song = new Audio("../../assets/audio/Mapa-cancion.mp3");
+    MapaPage.song.volume = 0.3;
+    MapaPage.song.play();
+
+    setTimeout(this.startVoice, 3200);
+    setTimeout(this.stopSong, 25000);
+  }
+
+  startVoice(){
+    MapaPage.audio = new Audio("../../assets/audio/Mapa-principal.m4a");
+    MapaPage.audio.play();
+  }
+
+  stopSong(){
+    console.log(MapaPage.song);
+    MapaPage.song.pause();
+    MapaPage.song.currentTime = 0;
   }
 }
