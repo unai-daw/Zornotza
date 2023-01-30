@@ -72,43 +72,43 @@ export class MapaPage implements OnInit,ViewWillLeave {
     );
 
     var content1 = L.DomUtil.create('div','content1'),popup1 = L.popup().setContent(content1);
-    content1.innerHTML = "<button>Andres Espinosa</button>";
+    content1.innerHTML = "<p style='margin:-10px; font-weight:bold;font-size: 1.5vh; color:#346eeb;'>Andres Espinosa</p>";
     L.DomEvent.addListener(content1, 'click', () => {
       Functions.navigateTo(this.router,'buho-principal/andres-espinosa');
     });
 
     var content2 = L.DomUtil.create('div','content2'),popup2 = L.popup().setContent(content2);
-    content2.innerHTML = "<button>Nagelen eskultura</button>";
+    content2.innerHTML = "<p style='margin:-10px; font-weight:bold;font-size: 1.5vh; color:#346eeb;'>Nagelen eskultura</p>";
     L.DomEvent.addListener(content2, 'click', () => {
       Functions.navigateTo(this.router,'buho-principal/nagelen-eskultura');
     });
 
     var content3 = L.DomUtil.create('div','content3'),popup3 = L.popup().setContent(content3);
-    content3.innerHTML = "<button>Mikel Urdangarin</button>";
+    content3.innerHTML = "<p style='margin:-10px; font-weight:bold;font-size: 1.5vh; color:#346eeb;'>Mikel Urdangarin</p>";
     L.DomEvent.addListener(content3, 'click', () => {
       Functions.navigateTo(this.router,'buho-principal/mikel-urdangarin');
     });
 
     var content4 = L.DomUtil.create('div','content4'),popup4 = L.popup().setContent(content4);
-    content4.innerHTML = "<button>Lara Izaguirre</button>";
+    content4.innerHTML = "<p style='margin:-10px; font-weight:bold;font-size: 1.5vh; color:#346eeb;'>Lara Izaguirre</p>";
     L.DomEvent.addListener(content4, 'click', () => {
       Functions.navigateTo(this.router,'buho-principal/lara-izaguirre');
     });
 
     var content5 = L.DomUtil.create('div','content5'),popup5 = L.popup().setContent(content5);
-    content5.innerHTML = "<button>Udabarri dantza taldea</button>";
+    content5.innerHTML = "<p style='margin:-10px; font-weight:bold;font-size: 1.5vh; color:#346eeb;'>Udabarri dantza taldea</p>";
     L.DomEvent.addListener(content5, 'click', () => {
       Functions.navigateTo(this.router,'buho-principal/udabarri-dantza-taldea');
     });
 
     var content6 = L.DomUtil.create('div','content6'),popup6 = L.popup().setContent(content6);
-    content6.innerHTML = "<button>Emakumeen Espetxea</button>";
+    content6.innerHTML = "<p style='margin:-10px; font-weight:bold;font-size: 1.5vh; color:#346eeb;'>Emakumeen Espetxea</p>";
     L.DomEvent.addListener(content6, 'click', () => {
       Functions.navigateTo(this.router,'buho-principal/emakumeen-espetxea');
     });
 
     var content7 = L.DomUtil.create('div','content7'),popup7 = L.popup().setContent(content7);
-    content7.innerHTML = "<button>Haizetara</button>";
+    content7.innerHTML = "<p style='margin:-10px; font-weight:bold;font-size: 1.5vh; color:#346eeb;'>Haizetara</p>";
     L.DomEvent.addListener(content7, 'click', () => {
       Functions.navigateTo(this.router,'buho-principal/haizetara');
     });
