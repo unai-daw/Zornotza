@@ -17,6 +17,7 @@ export class LaraIzaguirreJokuaPage implements ViewWillEnter, ViewWillLeave,View
   ionViewWillEnter(): void {
     LaraIzaguirreJokuaPage.video = document.getElementById("videoplayer");
     LaraIzaguirreJokuaPage.video.play();
+
   }
 
   ionViewDidEnter(): void {
