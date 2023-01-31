@@ -11,58 +11,49 @@
       <h1>GALDERAK</h1>
     <br/>
       <h5>Non ospatzen da?</h5>
-      <select name="hutsune2" id="hutsune2" form="hutsuneform">
-        <option value="alferra">Zornotzan</option>
-        <option value="ederra">Durangon</option>
-        <option value="elderra">Gernikan</option>
+      <select id="hutsune1">
+        <option value="zornotzan">Zornotzan</option>
+        <option value="durangon">Durangon</option>
+        <option value="gernikan">Gernikan</option>
       </select> 
       <br/><br/><br/>
       <h5>Zer ospatzen da?</h5>
-      <select name="hutsune2" id="hutsune2" form="hutsuneform">
-        <option value="alferra">Kirol ekintza bat</option>
-        <option value="ederra">Musika lehiaketa bat</option>
-        <option value="elderra">Trotila txapelketa bat</option>
-      </select> 
-      <br/><br/><br/>
-      <h5>Non ospatzen da?</h5>
-      <select name="hutsune2" id="hutsune2" form="hutsuneform">
-        <option value="alferra">Zornotzan</option>
-        <option value="ederra">Durangon</option>
-        <option value="elderra">Gernikan</option>
+      <select id="hutsune2">
+        <option value="kirol ekintza bat">Kirol ekintza bat</option>
+        <option value="musika lehiaketa bat">Musika lehiaketa bat</option>
+        <option value="trotila txapelketa bat">Trotila txapelketa bat</option>
       </select> 
       <br/><br/><br/>
       <h5>Nondik datoz musikariak?</h5>
-      <select name="hutsune2" id="hutsune2" form="hutsuneform">
-        <option value="alferra">Bizkaiatik</option>
-        <option value="ederra">Europatik</option>
-        <option value="elderra">Mundu osotik</option>
+      <select id="hutsune3">
+        <option value="bizkaiatik">Bizkaiatik</option>
+        <option value="europatik">Europatik</option>
+        <option value="mundu osotik">Mundu osotik</option>
       </select> 
       <br/><br/><br/>
       <h5>Zein urtarotan ospatzen da?</h5>
-      <select name="hutsune2" id="hutsune2" form="hutsuneform">
-        <option value="alferra">Udaberrian</option>
-        <option value="ederra">Udan</option>
-        <option value="elderra">Udazkenean</option>
+      <select id="hutsune4">
+        <option value="udaberrian">Udaberrian</option>
+        <option value="udan">Udan</option>
+        <option value="udazkenean">Udazkenean</option>
       </select> 
       <br/><br/><br/>
       <h5>Zenbat irauten du?</h5>
-      <select name="hutsune2" id="hutsune2" form="hutsuneform">
-        <option value="alferra">3 egun</option>
-        <option value="ederra">5 egun</option>
-        <option value="elderra">Aste bat</option>
+      <select id="hutsune5">
+        <option value="3 egun">3 egun</option>
+        <option value="5 egun">5 egun</option>
+        <option value="aste bat">Aste bat</option>
       </select> 
       <br/><br/><br/>
       <h5>Zenbat sari banatzen dira?</h5>
-      <select name="hutsune2" id="hutsune2" form="hutsuneform">
-        <option value="alferra">2</option>
-        <option value="ederra">1</option>
-        <option value="elderra">3</option>
+      <select id="hutsune6">
+        <option value="2">2</option>
+        <option value="1">1</option>
+        <option value="3">3</option>
       </select> 
       <br/><br/><br/>
     </div>
 
-
-</ion-content>
-<ion-footer class="foot">
- <button id="jarraitu">Zuzendu</button>
-</ion-footer>
+    <ion-footer class="foot">
+      <button (click)="validate()" id="validate">ZUZENDU</button>
+    </ion-footer>
