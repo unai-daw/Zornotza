@@ -9,6 +9,7 @@ import { Functions } from 'src/classes/functions';
 })
 export class MikelUrdangarinJokuaPage implements OnInit {
   constructor(private router:Router) {}
+  static audio:any;
 
   ngOnInit() {
     
@@ -115,14 +116,16 @@ export class MikelUrdangarinJokuaPage implements OnInit {
     }
 
     if(allCorrect==true){
-      console.log("chocho");
       this.navigateTo();
+    }else{
+      MikelUrdangarinJokuaPage.audio = new Audio("../../assets/audio/mikel-urdangarin-jokua-mal.m4a");
+      MikelUrdangarinJokuaPage.audio.play();
     }
     
   }
 
   navigateTo(){
-    Functions.navigateTo(this.router,"buho-principal/xd");
+    Functions.navigateTo(this.router,"buho-principal/mikel-urdangarin-jokua");
   }
 
 }
