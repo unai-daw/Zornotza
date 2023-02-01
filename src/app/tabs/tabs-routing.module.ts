@@ -16,6 +16,10 @@ const routes: Routes = [
         loadChildren: () => import('../buho-principal/buho-principal.module').then(m => m.BuhoPrincipalPageModule)
       },
       {
+        path: 'buho-final/:text',
+        loadChildren: () => import('../buho-final/buho-final.module').then(m => m.BuhoFinalPageModule)
+      },
+      {
         path: 'mikel-urdangarin-azalpena',
         loadChildren: () => import('../mikel-urdangarin-azalpena/mikel-urdangarin-azalpena.module').then(m => m.MikelUrdangarinAzalpenaPageModule)
       },

@@ -125,7 +125,7 @@ export class MikelUrdangarinJokuaPage implements OnInit {
   }
 
   navigateTo(){
-    Functions.navigateTo(this.router,"buho-principal/mikel-urdangarin-jokua");
+    Functions.navigateTo(this.router,"buho-final/mikel-urdangarin-jokua");
   }
 
 }

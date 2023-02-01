@@ -73,7 +73,11 @@ const routes: Routes = [
   {
     path: 'lara-izaguirre-jokua',
     loadChildren: () => import('./lara-izaguirre-jokua/lara-izaguirre-jokua.module').then( m => m.LaraIzaguirreJokuaPageModule)
+  },  {
+    path: 'buho-final',
+    loadChildren: () => import('./buho-final/buho-final.module').then( m => m.BuhoFinalPageModule)
   },
+
 
 
 

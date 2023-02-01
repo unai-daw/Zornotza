@@ -79,7 +79,7 @@ export class HaizetaraJokuaPage implements OnInit {
   }
 
   navigateTo(){
-    Functions.navigateTo(this.router,"buho-principal/haizetara-jokua");
+    Functions.navigateTo(this.router,"buho-final/haizetara-jokua");
   }
 
 }

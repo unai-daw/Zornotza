@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Functions } from 'src/classes/functions';
 
 @Component({
   selector: 'app-lara-izaguirre-jokua2',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LaraIzaguirreJokua2Page implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
+  static audio:any;
 
   ngOnInit() {
+  }
+
+  navigateTo(){
+    Functions.navigateTo(this.router,"buho-final/lara-izaguirre-jokua");
   }
 
 }

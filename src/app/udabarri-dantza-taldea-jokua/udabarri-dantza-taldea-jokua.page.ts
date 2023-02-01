@@ -70,7 +70,7 @@ export class UdabarriDantzaTaldeaJokuaPage implements OnInit {
   }
 
   navigateTo(){
-    Functions.navigateTo(this.router,"buho-principal/udabarri-dantza-taldea-jokua");
+    Functions.navigateTo(this.router,"buho-final/udabarri-dantza-taldea-jokua");
   }
 
   
