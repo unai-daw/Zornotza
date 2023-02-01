@@ -11,6 +11,8 @@ export class UdabarriDantzaTaldeaJokuaPage implements OnInit {
 
   constructor(private router:Router) { }
 
+  static audio:any;
+
   ngOnInit() {
   }
 
@@ -59,14 +61,18 @@ export class UdabarriDantzaTaldeaJokuaPage implements OnInit {
     }
     
     if(allCorrect==true){
-      console.log("chocho");
       this.navigateTo();
+    }else{
+      UdabarriDantzaTaldeaJokuaPage.audio = new Audio("../../assets/audio/udabarri-dantza-taldea-jokua-mal.m4a");
+      UdabarriDantzaTaldeaJokuaPage.audio.play();
     }
     
   }
 
   navigateTo(){
-    Functions.navigateTo(this.router,"buho-principal/xd");
+    Functions.navigateTo(this.router,"buho-principal/udabarri-dantza-taldea-jokua");
   }
+
+  
 
 }
