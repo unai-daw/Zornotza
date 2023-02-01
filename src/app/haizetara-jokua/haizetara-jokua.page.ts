@@ -11,6 +11,8 @@ export class HaizetaraJokuaPage implements OnInit {
 
   constructor(private router:Router) { }
 
+  static audio:any;
+
   ngOnInit() {
   }
 
@@ -68,14 +70,16 @@ export class HaizetaraJokuaPage implements OnInit {
     }
 
     if(allCorrect==true){
-      console.log("chocho");
       this.navigateTo();
+    }else{
+      HaizetaraJokuaPage.audio = new Audio("../../assets/audio/haizetara-jokua-mal.m4a");
+      HaizetaraJokuaPage.audio.play();
     }
     
   }
 
   navigateTo(){
-    Functions.navigateTo(this.router,"buho-principal/Haizetaraondo");
+    Functions.navigateTo(this.router,"buho-principal/haizetara-jokua");
   }
 
 }
