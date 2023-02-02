@@ -1,5 +1,7 @@
 import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Platform } from '@ionic/angular';
+import { Functions } from 'src/classes/functions';
 import {Tile} from '../../classes/tile'
 
 @Component({
@@ -27,7 +29,7 @@ export class AndresEspinosaJokuaPage implements AfterViewInit {
   cell_size:any;
   interval:any;
 
-  constructor(private plt: Platform) {}
+  constructor(private plt: Platform, private router:Router) {}
 
   scToGrid(sc_x:any,sc_y:any):any{
     return [Math.floor(sc_x/this.cell_size),Math.floor(sc_y/this.cell_size)];
@@ -116,7 +118,7 @@ export class AndresEspinosaJokuaPage implements AfterViewInit {
 
   checkWordsFound(){
     if(this.found_words.length == this.soup_words.length){
-
+      this.navigateTo();
     }
   }
 
@@ -316,6 +318,9 @@ export class AndresEspinosaJokuaPage implements AfterViewInit {
     if(AndresEspinosaJokuaPage.selected_point_2.length != 0){
       AndresEspinosaJokuaPage.getTile(AndresEspinosaJokuaPage.selected_point_2[0],AndresEspinosaJokuaPage.selected_point_2[1]).bg_color = "rgba(0,0,255,1)"
     }
+  }
+  navigateTo(){
+    Functions.navigateTo(this.router,"buho-final/andres-espinosa-jokua");
   }
 
 }
