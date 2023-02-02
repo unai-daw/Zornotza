@@ -38,6 +38,7 @@ export class BuhoFinalPage implements ViewWillEnter,ViewWillLeave,ViewDidEnter {
 
   checkAudio(router:any){
     if(BuhoFinalPage.audio.paused){
+
       Functions.navigateTo(router, "mapa");
     }
   }
