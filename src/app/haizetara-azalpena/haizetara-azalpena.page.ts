@@ -5,7 +5,7 @@ import { Functions } from 'src/classes/functions';
 @Component({
   selector: 'app-haizetara-azalpena',
   templateUrl: './haizetara-azalpena.page.html',
-  styleUrls: ['../../assets/style.css'],
+  styleUrls: ['../../assets/style.css','../../assets/scss/style2.css'],
 })
 export class HaizetaraAzalpenaPage implements OnInit {
 

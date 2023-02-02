@@ -1,0 +1,36 @@
+
+.texto h3{
+    @include small{
+        font-size: $elementu-size-small;
+    }
+    @include medium{
+        font-size: $elementu-size-medium;
+
+    }
+    @include large{
+        font-size: $elementu-size-large;
+
+
+    }
+    
+}
+
+.texto{
+    @include small{
+        height: $height-small;
+        width: $width-small;
+    }
+    @include medium{
+        height: $height-medium;
+        width: $width-medium;
+
+    }
+    @include large{
+        height: $height-large;
+        width: $width-large;
+
+
+    }   
+}
+
+

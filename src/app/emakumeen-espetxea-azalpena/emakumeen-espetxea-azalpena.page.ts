@@ -5,7 +5,7 @@ import { Functions } from 'src/classes/functions';
 @Component({
   selector: 'app-emakumeen-espetxea-azalpena',
   templateUrl: './emakumeen-espetxea-azalpena.page.html',
-  styleUrls: ['../../assets/style.css'],
+  styleUrls: ['../../assets/style.css','../../assets/scss/style2.css'],
 })
 export class EmakumeenEspetxeaAzalpenaPage implements OnInit {
 

@@ -5,7 +5,7 @@ import { Functions } from 'src/classes/functions';
 @Component({
   selector: 'app-mikel-urdangarin-azalpena',
   templateUrl: './mikel-urdangarin-azalpena.page.html',
-  styleUrls: ['../../assets/style.css'],
+  styleUrls: ['../../assets/style.css','../../assets/scss/style2.css'],
 })
 export class MikelUrdangarinAzalpenaPage implements OnInit {
 

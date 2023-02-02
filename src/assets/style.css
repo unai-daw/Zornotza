@@ -102,11 +102,9 @@
 }
 
 .texto {
-  display: flex;
-  justify-content: center;
-  width: 700px;
   border: solid;
   border-radius: 10px;
-  margin-top: 100px;
+  margin: 4.5vh;
   padding: 40px;
+  
 }
