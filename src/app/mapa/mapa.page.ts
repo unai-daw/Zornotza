@@ -46,6 +46,7 @@ export class MapaPage implements OnInit,ViewWillLeave {
     let icon = L.icon({
       iconUrl: 'marker-icon.png',
       iconSize: [25, 35],
+    
     });
 
     let marker = L.marker([43.215073740783005,-2.7308718372091714], { icon: icon }).addTo(
