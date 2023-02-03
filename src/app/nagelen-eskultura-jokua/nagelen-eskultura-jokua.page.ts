@@ -25,6 +25,7 @@ export class NagelenEskulturaJokuaPage implements AfterViewInit{
   interval:any;
   puzzle_img_src:any = "../../assets/Img/3.argazkia.jpeg";
   puzzle_img:any;
+  scale:number = 0.8;
 
   constructor(private plt: Platform, private router:Router) {}
 
@@ -75,22 +76,21 @@ export class NagelenEskulturaJokuaPage implements AfterViewInit{
       this.canvasElement = this.canvas.nativeElement;
       if (this.width>this.height){
         this.width=this.height;
+        this.scale=this.height/1300;
       }else{
         this.height=this.width;
+        this.scale=this.width/1300;
       }
-      this.height -= (this.piece_height % NagelenEskulturaJokuaPage.puzzle_size);
-      this.width -= (this.piece_width % NagelenEskulturaJokuaPage.puzzle_size);
-      this.canvasElement.height = this.height;
+      this.width = this.puzzle_img.width * this.scale;
+      this.height = this.puzzle_img.height * this.scale;
       this.canvasElement.width = this.width;
-      //this.resizePuzzle();
+      this.canvasElement.height = this.height;
+      this.resizePuzzle();
      }
 
-     resizePuzzle(){
-        this.puzzle_img.width = this.width;
-        this.puzzle_img.height = this.height;
-        this.piece_width = this.puzzle_img.width/NagelenEskulturaJokuaPage.puzzle_size;
-        this.piece_height= this.puzzle_img.height/NagelenEskulturaJokuaPage.puzzle_size;
-
+    resizePuzzle(){
+      this.piece_width = this.width/NagelenEskulturaJokuaPage.puzzle_size;
+      this.piece_height= this.height/NagelenEskulturaJokuaPage.puzzle_size;
       for (let x = 0; x < NagelenEskulturaJokuaPage.puzzle_size; x++) {
         for (let y = 0; y < NagelenEskulturaJokuaPage.puzzle_size; y++) {
           if(!NagelenEskulturaJokuaPage.checkPiece(x,y)){
@@ -124,16 +124,17 @@ export class NagelenEskulturaJokuaPage implements AfterViewInit{
   ngAfterViewInit() {
     this.puzzle_img = new Image() 
     this.puzzle_img.src = this.puzzle_img_src;
-    this.piece_width = this.puzzle_img.width/NagelenEskulturaJokuaPage.puzzle_size;
-    this.piece_height= this.puzzle_img.height/NagelenEskulturaJokuaPage.puzzle_size;
-    this.resize();
-    this.generatePuzzle();
-    this.interval = setInterval(this.draw, 10,this.canvasElement,this.canvasElement.getContext('2d'));
+    this.puzzle_img.onload = () => {
+      debugger
+
+      this.resize();
+      this.generatePuzzle();
+      this.interval = setInterval(this.draw, 10,this.canvasElement,this.canvasElement.getContext('2d'));
+    }
   }
 
   generatePuzzle(){
     var all_xy = [];
-
     for (let x = 0; x < NagelenEskulturaJokuaPage.puzzle_size; x++) {
       for (let y = 0; y < NagelenEskulturaJokuaPage.puzzle_size; y++) {
         all_xy.push([x,y]);
@@ -144,10 +145,11 @@ export class NagelenEskulturaJokuaPage implements AfterViewInit{
       for (let y= 0; y < NagelenEskulturaJokuaPage.puzzle_size; y++) {
         let piece =new Piece(x,y,this.piece_width,this.piece_height,this.puzzle_img);
         let xy_index = Math.floor(Math.random() *all_xy.length);
-        //piece.x = all_xy[xy_index][0];
-        //piece.y = all_xy[xy_index][1];
-        piece.x = x;
-        piece.y = y;
+        piece.x = all_xy[xy_index][0];
+        piece.y = all_xy[xy_index][1];
+        piece.scale = this.scale;
+        //piece.x = x;
+        //piece.y = y;
         all_xy.splice(xy_index,1);
         NagelenEskulturaJokuaPage.setPiece(piece);
       }
