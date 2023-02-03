@@ -319,6 +319,7 @@ export class AndresEspinosaJokuaPage implements AfterViewInit {
       AndresEspinosaJokuaPage.getTile(AndresEspinosaJokuaPage.selected_point_2[0],AndresEspinosaJokuaPage.selected_point_2[1]).bg_color = "rgba(0,0,255,1)"
     }
   }
+  
   navigateTo(){
     Functions.navigateTo(this.router,"buho-final/andres-espinosa-jokua");
   }

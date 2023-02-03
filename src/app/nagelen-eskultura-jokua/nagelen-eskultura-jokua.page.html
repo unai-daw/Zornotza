@@ -7,10 +7,10 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="content">
-    
-      <h1>PUZZLE BAT EGONGO DA HEMEN</h1>
-
+  <div style="display: flex;flex: row;justify-content: center;">
+    <div class="ion-canvas" (window:resize)="onResize($event)">
+      <canvas style="border:solid black 2px;" #imageCanvas (touchend)="getUnlicked($event);" (touchstart)="getTouchStart($event);" (touchmove)="getTouchMove($event)" (mousedown)="getClicked($event)" (mousemove)="getMoved($event)" (mouseup)="getUnlicked($event)" ></canvas>
+    </div>
   </div>
 </ion-content>
 <ion-footer class="foot"> </ion-footer>
