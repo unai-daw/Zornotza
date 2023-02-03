@@ -5,7 +5,7 @@ import { Functions } from 'src/classes/functions';
 @Component({
   selector: 'app-udabarri-dantza-taldea-azalpena',
   templateUrl: './udabarri-dantza-taldea-azalpena.page.html',
-  styleUrls: ['../../assets/style.css'],
+  styleUrls: ['../../assets/style.css','../../assets/scss/style2.css'],
 })
 export class UdabarriDantzaTaldeaAzalpenaPage implements OnInit {
 

@@ -1,0 +1,58 @@
+$bg-colors: (
+  "principal": $color-principal,
+);
+
+$text-colors: (
+  "principal": $color-light,
+);
+
+.botones {
+
+    @include small{
+        padding: $btn-padding-small*1.2;
+        font-size: $font-size-small*1.2;
+    }
+    @include medium{
+        padding: $btn-padding-medium*1.2;
+        font-size: $font-size-medium*1.2;
+    }
+    @include large{
+        padding: $btn-padding-large*1.2;
+        font-size: $font-size-large*1.2;
+    }
+
+  border-radius: 8px;
+  background-color: #144674;
+  font-style: bold;
+  color: white;
+  margin: 1vh;
+  
+    &:hover {
+        @include small{
+            padding: $btn-padding-small *1.2;
+            font-size: $font-size-small *1.4;
+        }
+        @include medium{
+            padding: $btn-padding-medium *1.2;
+            font-size: $font-size-medium *1.4;
+        }
+        @include large{
+            padding: $btn-padding-large *1.2;
+            font-size: $font-size-large *1.4;
+        }
+    }
+
+  }
+
+
+@each $k, $v in $bg-colors {
+    .botones-#{$k} {
+      background-color: $v;
+    }
+  }
+
+  @each $k, $v in $text-colors {
+    .botones-#{$k} {
+        color: $v;
+    }
+  }

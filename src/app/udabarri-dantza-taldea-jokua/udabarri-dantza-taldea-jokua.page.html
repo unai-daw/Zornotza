@@ -1,51 +1,47 @@
 <ion-header [translucent]="true" class="head">
-  <h3
-    class="title"
-  >
-    UDABARRI DANTZA TALDEA
-  </h3>
+  <h3 class="title">UDABARRI DANTZA TALDEA</h3>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div
-    class="content"
-  >
-    <audio controls style="margin-top: 30px">
-      <source
-        src="../../assets/audio/mikel-urdangarin2.mp3"
-        type="audio/ogg"
-      /></audio
-    ><br />
-
+  <div class="content">
+    <div class="texto">
+      <audio controls style="margin-top: 30px">
+        <source
+          src="../../assets/audio/mikel-urdangarin2.mp3"
+          type="audio/ogg"
+        /></audio
+      ><br />
       <h3>Udabarri Dantza Taldea Durangokoa da?</h3>
       <select name="galdera1" id="galdera1" form="galderaform">
         <option value="egia">Egia</option>
-        <option value="gezurra">Gezurra</option>
-      </select><br><br>
-      <h3>Talde honen sortzaileak Jose Mari Agirrek, Tomas Zugazartazak eta Jesus Mari 
-      Emaldiak dira?</h3>
+        <option value="gezurra">Gezurra</option></select
+      ><br /><br />
+      <h3>
+        Talde honen sortzaileak Jose Mari Agirrek, Tomas Zugazartazak eta Jesus
+        Mari Emaldiak dira?
+      </h3>
       <select name="galdera2" id="galdera2" form="galderaform">
         <option value="egia">Egia</option>
-        <option value="gezurra">Gezurra</option>
-      </select><br><br>
+        <option value="gezurra">Gezurra</option></select
+      ><br /><br />
       <h3>Udabarri Dantza Taldean dantzariak daude soilik?</h3>
       <select name="galdera3" id="galdera3" form="galderaform">
         <option value="egia">Egia</option>
-        <option value="gezurra">Gezurra</option>
-      </select><br><br>
+        <option value="gezurra">Gezurra</option></select
+      ><br /><br />
       <h3>Udabarri Dantza Taldean dantzariak daude soilik?</h3>
       <select name="galdera4" id="galdera4" form="galderaform">
         <option value="egia">Egia</option>
-        <option value="gezurra">Gezurra</option>
-      </select><br><br>
+        <option value="gezurra">Gezurra</option></select
+      ><br /><br />
       <h3>Udabarri Dantza Talde ekitaldi gutxitan parte hartu du?</h3>
       <select name="galdera5" id="galdera5" form="galderaform">
         <option value="egia">Egia</option>
         <option value="gezurra">Gezurra</option>
       </select>
-
+    </div>
   </div>
 </ion-content>
-<ion-footer class="foot"> 
-  <button (click)="validate()" id="validate">ZUZENDU</button>
+<ion-footer class="foot">
+  <button (click)="validate()" id="validate" class="botones">ZUZENDU</button>
 </ion-footer>

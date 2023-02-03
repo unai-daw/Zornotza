@@ -5,7 +5,7 @@ import { Functions } from 'src/classes/functions';
 @Component({
   selector: 'app-mikel-urdangarin-jokua',
   templateUrl: './mikel-urdangarin-jokua.page.html',
-  styleUrls: ['../../assets/style.css'],
+  styleUrls: ['../../assets/style.css','../../assets/scss/style2.css'],
 })
 export class MikelUrdangarinJokuaPage implements OnInit {
   constructor(private router:Router) {}

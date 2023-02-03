@@ -1,0 +1,39 @@
+
+.texto h3{
+    @include small{
+        font-size: $font-size-small;
+    }
+    @include medium{
+        font-size: $font-size-medium;
+
+    }
+    @include large{
+        font-size: $font-size-large;
+
+
+    }
+    
+}
+
+.texto{
+    @include small{
+
+        width: $width-small;
+    }
+    @include medium{
+
+        width: $width-medium;
+
+    }
+    @include large{
+
+        width: $width-large;
+
+
+    }   
+}
+
+
+
+
+
