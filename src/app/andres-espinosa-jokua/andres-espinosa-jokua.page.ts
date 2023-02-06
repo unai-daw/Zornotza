@@ -16,7 +16,7 @@ export class AndresEspinosaJokuaPage implements AfterViewInit {
 
   static soup_arr:any = []; 
 
-  static soup_size = 15;
+  static soup_size = 6;
   static selected_point_1:any = [];
   static selected_point_2:any = [];
   static slected_word:any =[];
@@ -25,7 +25,7 @@ export class AndresEspinosaJokuaPage implements AfterViewInit {
   found_words:any=[];
   width=this.plt.width();
   height=this.plt.height()-150;
-  soup_words:any = ["lander","iker","xabier","izaskun","lopez","hegoi"];
+  soup_words:any = ["hegoi"];
   cell_size:any;
   interval:any;
 
@@ -118,7 +118,9 @@ export class AndresEspinosaJokuaPage implements AfterViewInit {
 
   checkWordsFound(){
     if(this.found_words.length == this.soup_words.length){
-      this.navigateTo();
+      setTimeout(() => {
+        this.navigateTo();
+      }, 500);
     }
   }
 

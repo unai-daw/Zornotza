@@ -9,7 +9,7 @@
 <ion-content [fullscreen]="true">
   <div style="display: flex;flex: row;justify-content: center;">
     <div class="ion-canvas" (window:resize)="onResize($event)">
-      <canvas style="border:solid black 2px;" #imageCanvas (touchend)="getUnlicked($event);" (touchstart)="getTouchStart($event);" (touchmove)="getTouchMove($event)" (mousedown)="getClicked($event)" (mousemove)="getMoved($event)" (mouseup)="getUnlicked($event)" ></canvas>
+      <canvas style="border:solid black 2px;" #imageCanvas (mousedown)="getClicked($event)" (mouseup)="getUnclicked($event)" ></canvas>
     </div>
   </div>
 </ion-content>
