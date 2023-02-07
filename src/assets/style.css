@@ -11,6 +11,7 @@
 .head {
   background-color: #3D8ED9;
   padding: 2vh;
+  text-align: center;
 }
 
 .foot {
@@ -20,7 +21,7 @@
 
 .buho-animation {
   animation-name: buho-animation;
-  animation-duration: 2s;
+  animation-duration: 20s;
 }
 
 @keyframes buho-animation {
@@ -47,7 +48,7 @@
 
 .black_bg_animation {
   animation-name: black-bg-animation;
-  animation-duration: 2s;
+  animation-duration: 22s;
 }
 
 @keyframes black-bg-animation {
@@ -80,8 +81,8 @@
 
 .title {
   color: white;
-  font-family: 'Times New Roman', Times, serif;
-  font-style: bold;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 170%;
 }
 
 

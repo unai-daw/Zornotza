@@ -24,6 +24,8 @@ export class MapaPage implements OnInit,ViewWillLeave {
   ionViewWillLeave(): void {
     document.getElementById("buho").classList.remove("buho-animation");
     document.getElementById("black_bg").classList.remove("black_bg_animation");
+    MapaPage.song.pause();
+    MapaPage.song.currentTime = 0;
   }
 
   loadLeafletMap() {
@@ -126,21 +128,17 @@ export class MapaPage implements OnInit,ViewWillLeave {
   ngOnInit(): void {
     this.loadLeafletMap();
     MapaPage.song = new Audio("../../assets/audio/Mapa-cancion.mp3");
-    MapaPage.song.volume = 0.3;
-    MapaPage.song.play();
-
+    MapaPage.audio = new Audio("../../assets/audio/Mapa-principal.m4a");
     setTimeout(this.startVoice, 3200);
-    setTimeout(this.stopSong, 25000);
+    setTimeout(this.startSong, 1000);
+  }
+
+  startSong(){
+    MapaPage.song.volume = 0.3;
+    MapaPage.song.play()
   }
 
   startVoice(){
-    MapaPage.audio = new Audio("../../assets/audio/Mapa-principal.m4a");
     MapaPage.audio.play();
-  }
-
-  stopSong(){
-    console.log(MapaPage.song);
-    MapaPage.song.pause();
-    MapaPage.song.currentTime = 0;
   }
 }

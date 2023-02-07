@@ -5,7 +5,7 @@ import { Functions } from 'src/classes/functions';
 @Component({
   selector: 'app-lara-izaguirre-jokua2',
   templateUrl: './lara-izaguirre-jokua2.page.html',
-  styleUrls: ['../../assets/style.css'],
+  styleUrls: ['../../assets/style.css','../../assets/scss/style2.css'],
 })
 export class LaraIzaguirreJokua2Page implements OnInit {
 

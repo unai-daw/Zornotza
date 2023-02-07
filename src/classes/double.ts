@@ -4,14 +4,15 @@ export class Double {
     width:number;
     height:number;
     img:any;
-    scale:any;
+    id:any;
 
-    constructor(x_real:number,y_real:number,x:number,y:number,width_real:number,height_real:number,width:number,height:number,img:any) {
+    constructor(x:number,y:number,width:number,height:number,img:any) {
         this.x = x;
         this.y = y;
         this.width = width;
         this.height = height;
         this.img = img;
+
     }
 
     draw(ctx:any){
