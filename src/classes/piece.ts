@@ -8,7 +8,6 @@ export class Piece {
     x_real:number;
     y_real:number;
     img:any;
-    scale:any;
 
     constructor(x_real:number,y_real:number,x:number,y:number,width_real:number,height_real:number,width:number,height:number,img:any) {
         this.x_real = x_real;
