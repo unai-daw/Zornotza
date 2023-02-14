@@ -7,12 +7,9 @@ import { Functions } from 'src/classes/functions';
   templateUrl: './andres-espinosa-azalpena.page.html',
   styleUrls: ['../../assets/style.css','../../assets/scss/style2.css'],
 })
-export class AndresEspinosaAzalpenaPage implements OnInit {
+export class AndresEspinosaAzalpenaPage{
 
   constructor(private router : Router) { }
-
-  ngOnInit() {
-  }
 
   navigateTo(){
     Functions.navigateTo(this.router,"andres-espinosa-jokua")

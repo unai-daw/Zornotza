@@ -26,11 +26,8 @@ export class AndresEspinosaJokuaPage implements AfterViewInit {
   
   found_words:any=[];
   width=this.plt.width();
-  height=this.plt.height()-150;
-
+  height=this.plt.height()-147;
   soup_words:any = [];
-
-
   cell_size:any;
   interval:any;
 
@@ -201,7 +198,7 @@ export class AndresEspinosaJokuaPage implements AfterViewInit {
  //Resize stuff
  onResize(ev:any){
   this.width = ev.target.innerWidth;
-  this.height = ev.target.innerHeight-150;
+  this.height = ev.target.innerHeight-147;
   this.resize();
  }
 
@@ -289,12 +286,12 @@ export class AndresEspinosaJokuaPage implements AfterViewInit {
 
   //Start
   ngAfterViewInit() {
-  this.wordService.getTextos().subscribe(data => {
-    debugger
+  this.resize();
+  this.wordService.getWords().subscribe(data => {
       for (let i = 0; i < data.length; i++) {
         this.soup_words.push(data[i].word);
       }
-      this.resize();
+      
       this.generateSoup();
       this.interval = setInterval(this.draw, 10,this.canvasElement,this.canvasElement.getContext('2d'));
     },error => console.log('Error::' + error));

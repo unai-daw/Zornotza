@@ -9,7 +9,7 @@ export class WordService {
   private url = 'http://localhost:8000/api/words';
   constructor(private http: HttpClient) { }
 
-  getTextos(): Observable<Word[]>{
+  getWords(): Observable<Word[]>{
     return this.http.get<Word[]>(this.url);
   }
 }
