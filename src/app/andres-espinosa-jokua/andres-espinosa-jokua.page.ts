@@ -27,7 +27,10 @@ export class AndresEspinosaJokuaPage implements AfterViewInit {
   found_words:any=[];
   width=this.plt.width();
   height=this.plt.height()-150;
+
   soup_words:any = [];
+
+
   cell_size:any;
   interval:any;
 

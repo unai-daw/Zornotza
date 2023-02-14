@@ -14,19 +14,18 @@ export class NagelenEskulturaJokuaPage implements AfterViewInit{
 
   static puzzle_arr:any = []; 
 
-  static puzzle_size = 3;
+  static puzzle_size = 4;
   static selected_point_1:any = [];
   static selected_point_2:any = [];
   static piece_width:any;
   static piece_height:any;
   
   width=this.plt.width();
-  height=this.plt.height()-150;
+  height=this.plt.height()-157;
 
   interval:any;
   puzzle_img_src:any = "../../assets/Img/3.argazkia.jpeg";
   puzzle_img:any;
-  scale:number = 0.8;
   real_piece_width:number;
   real_piece_height:number;
 
@@ -65,7 +64,6 @@ export class NagelenEskulturaJokuaPage implements AfterViewInit{
   }
   
     //Mouse && Touch
-
     getUnclicked(ev:any){
       if(NagelenEskulturaJokuaPage.selected_point_2.length != 0){
         NagelenEskulturaJokuaPage.selected_point_1 = [];
@@ -88,21 +86,17 @@ export class NagelenEskulturaJokuaPage implements AfterViewInit{
      //Resize stuff
     onResize(ev:any){
       this.width = ev.target.innerWidth;
-      this.height = ev.target.innerHeight-150;
+      this.height = ev.target.innerHeight-157;
       this.resize();
     }
 
     resize(){
       this.canvasElement = this.canvas.nativeElement;
       if (this.width>this.height){
-        this.width=this.height;
-        this.scale=this.height/1300;
+        this.width=this.height * this.puzzle_img.width / this.puzzle_img.height;
       }else{
-        this.height=this.width;
-        this.scale=this.width/1300;
+        this.height=this.width * this.puzzle_img.height / this.puzzle_img.width;
       }
-      this.width = this.puzzle_img.width * this.scale;
-      this.height = this.puzzle_img.height * this.scale;
       this.canvasElement.width = this.width;
       this.canvasElement.height = this.height;
       this.resizePuzzle();
@@ -168,7 +162,6 @@ export class NagelenEskulturaJokuaPage implements AfterViewInit{
       for (let y= 0; y < NagelenEskulturaJokuaPage.puzzle_size; y++) {
         let xy_index = Math.floor(Math.random() *all_xy.length);
         let piece =new Piece(x,y,all_xy[xy_index][0], all_xy[xy_index][1],this.real_piece_width,this.real_piece_height,NagelenEskulturaJokuaPage.piece_width,NagelenEskulturaJokuaPage.piece_height,this.puzzle_img);
-        piece.scale = this.scale;
         all_xy.splice(xy_index,1);
         NagelenEskulturaJokuaPage.setPiece(piece);
       }
