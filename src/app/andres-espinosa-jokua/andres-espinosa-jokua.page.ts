@@ -2,7 +2,10 @@ import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Platform } from '@ionic/angular';
 import { Functions } from 'src/classes/functions';
-import {Tile} from '../../classes/tile'
+import {Tile} from '../../classes/tile';
+import { WordService} from '../services/word.service';
+import { Word } from '../interfaces/word';
+
 
 @Component({
   selector: 'app-andres-espinosa-jokua',
@@ -15,8 +18,7 @@ export class AndresEspinosaJokuaPage implements AfterViewInit {
   canvasElement: any;
 
   static soup_arr:any = []; 
-
-  static soup_size = 6;
+  static soup_size = 11;
   static selected_point_1:any = [];
   static selected_point_2:any = [];
   static slected_word:any =[];
@@ -25,11 +27,11 @@ export class AndresEspinosaJokuaPage implements AfterViewInit {
   found_words:any=[];
   width=this.plt.width();
   height=this.plt.height()-150;
-  soup_words:any = ["hegoi"];
+  soup_words:any = [];
   cell_size:any;
   interval:any;
 
-  constructor(private plt: Platform, private router:Router) {}
+  constructor(private plt: Platform, private router:Router,private wordService: WordService) {}
 
   scToGrid(sc_x:any,sc_y:any):any{
     return [Math.floor(sc_x/this.cell_size),Math.floor(sc_y/this.cell_size)];
@@ -284,9 +286,15 @@ export class AndresEspinosaJokuaPage implements AfterViewInit {
 
   //Start
   ngAfterViewInit() {
-    this.resize();
-    this.generateSoup();
-    this.interval = setInterval(this.draw, 10,this.canvasElement,this.canvasElement.getContext('2d'));
+  this.wordService.getTextos().subscribe(data => {
+    debugger
+      for (let i = 0; i < data.length; i++) {
+        this.soup_words.push(data[i].word);
+      }
+      this.resize();
+      this.generateSoup();
+      this.interval = setInterval(this.draw, 10,this.canvasElement,this.canvasElement.getContext('2d'));
+    },error => console.log('Error::' + error));
   }
 
   //Game loop draw
