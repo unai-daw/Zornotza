@@ -24,6 +24,7 @@ export class AndresEspinosaJokuaPage implements AfterViewInit {
   static slected_word:any =[];
   static found_words_pos:any=[];
   
+  refresh = false;
   found_words:any=[];
   width=this.plt.width();
   height=this.plt.height()-147;
@@ -287,7 +288,7 @@ export class AndresEspinosaJokuaPage implements AfterViewInit {
   //Start
   ngAfterViewInit() {
   this.resize();
-  this.wordService.getWords().subscribe(data => {
+  this.wordService.getWords(this.refresh).subscribe(data => {
       for (let i = 0; i < data.length; i++) {
         this.soup_words.push(data[i].word);
       }
