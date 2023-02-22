@@ -33,6 +33,7 @@
 .botones {
   border-radius: 8px;
   background-color: #144674;
+  border: 0.5vh solid lightblue;
   font-style: bold;
   color: white;
   margin: 1vh;
@@ -53,24 +54,6 @@
   .botones {
     padding: 1.8vh;
     font-size: 24px;
-  }
-}
-@media only screen and (min-width: 0px) {
-  .botones:hover {
-    padding: 1.2vh;
-    font-size: 21px;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .botones:hover {
-    padding: 1.5vh;
-    font-size: 23.8px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .botones:hover {
-    padding: 1.8vh;
-    font-size: 28px;
   }
 }
 

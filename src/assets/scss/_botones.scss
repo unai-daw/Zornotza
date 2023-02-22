@@ -23,25 +23,10 @@ $text-colors: (
 
   border-radius: 8px;
   background-color: #144674;
+  border:0.5vh solid lightblue;
   font-style: bold;
   color: white;
   margin: 1vh;
-  
-    &:hover {
-        @include small{
-            padding: $btn-padding-small *1.2;
-            font-size: $font-size-small *1.4;
-        }
-        @include medium{
-            padding: $btn-padding-medium *1.2;
-            font-size: $font-size-medium *1.4;
-        }
-        @include large{
-            padding: $btn-padding-large *1.2;
-            font-size: $font-size-large *1.4;
-        }
-    }
-
   }
 
 

@@ -10,8 +10,9 @@
 
 .head {
   background-color: #3D8ED9;
-  padding: 2vh;
+  padding: 1vh;
   text-align: center;
+  border-bottom:1vh solid #2C698D;
 }
 
 .foot {
